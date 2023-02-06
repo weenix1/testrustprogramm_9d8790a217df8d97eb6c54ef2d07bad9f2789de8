@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="BlockchainerVisualisation.Views.MessageWindow"
+        Name="myWindow"
+        MinWidth="200"
+        WindowStartupLocation="CenterOwner"
+        MaxWidth="550"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        
+        <TextBox IsReadOnly="True" BorderBrush="Transparent" BorderThickness="0" Background="Transparent"  Margin="10"  Text="{Binding Text, ElementName=myWindow}" TextWrapping="Wrap"  ></TextBox>
+        <Button Grid.Row="1"  Margin="10" HorizontalAlignment="Right" Click="Button_OnClick">Ok</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,64 @@
+[package]
+name = "node"
+version = "0.1.0"
+edition = "2021"
+
+#[profile.dev]
+#opt-level = 0
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#libp2p = { version = "0.49.0", features = ["tcp", "dns", "async-std", "websocket", "noise", "mplex", "yamux", "ping", "identify", "floodsub", "mdns", "gossipsub", "request-response"] }
+#libp2p = { version = "0.49.0", features = [] }
+libp2p-core = {version="0.38.0", features=["serde"]}
+#libp2p = "0.49.0"
+futures = "0.3.25"
+futures-util = "0.3.25"
+async-std = { version = "1.12.0", features = ["attributes"] }
+#log = "0.4.17"
+#env_logger = "0.9.3"
+
+chrono = {version="0.4.23", features=["serde"]} #for datetime
+
+lru = "0.8.1"
+digest = "0.10.6"
+sha2 = "0.10.6"
+
+serde = {version="1.0.149", features=["serde_derive"]}
+serde_json = "1.0.89"
+serde_with = "2.1.0"
+
+base64 = "0.13.1"
+clap = { version = "4.0.29", features = ["derive"] }
+async-trait = "0.1.60"
+
+
+actix-web = "4.2.1"
+actix-cors = "0.6.4"
+actix-multipart = "0.4.0"
+actix-files = "0.6.2"
+
+anyhow = "1.0.68"
+indexmap = "1.9.2"
+bytes = "1.3.0"
+async-recursion = "1.0.0"
+
+
+reqwest = { version = "0.11.13", features = ["stream", "json", "multipart"] }
+tokio = { version = "1.23", features = ["macros", "rt-multi-thread"] }
+tokio-util = { version = "0.7.3", features = ["codec"] }
+pathdiff = "0.2.1"
+walkdir = "2.3.2"
+get_if_addrs = "0.5.3"
+regex = "1.7.0"
+hex = "0.4.3"
+fs_extra = "1.2.0"
+thiserror = "1.0.38"
+derive_more = "0.99.17"
